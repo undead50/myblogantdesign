@@ -1,0 +1,38 @@
+/* index.css */
+
+/* Custom styles for Carousel */
+.ant-carousel {
+    width: 100%;
+    max-width: 100%; /* Adjust the maximum width as per your design */
+    margin: 0 auto;
+  }
+  
+  /* Custom styles for Carousel slides */
+  .ant-carousel .slick-slide {
+    height: 300px; /* Adjust the height as per your design */
+  }
+  
+  /* Custom styles for responsive Carousel */
+  @media (max-width: 576px) {
+    /* Styles for extra small screens (mobile devices) */
+    .ant-carousel .slick-slide {
+      height: 200px; /* Adjust the height for small screens */
+    }
+  }
+  
+  @media (min-width: 576px) and (max-width: 992px) {
+    /* Styles for small screens (tablets) */
+    .ant-carousel .slick-slide {
+      height: 250px; /* Adjust the height for tablets */
+    }
+  }
+  
+  @media (min-width: 992px) and (max-width: 1200px) {
+    /* Styles for medium screens (laptops) */
+    .ant-carousel .slick-slide {
+      height: 350px; /* Adjust the height for laptops */
+    }
+  }
+  
+  /* Add more media queries and adjust the styles for other screen sizes as needed */
+  
