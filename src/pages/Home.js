@@ -1,18 +1,19 @@
-import AppHeader from "../components/AppHeader";
-import Slider from "../components/Slider";
-import CustomCard from "../components/CustomCard";
-import { CustomFooter } from "../components/CustomFooter";
-
+import AppHeader from '../components/AppHeader';
+import Slider from '../components/Slider';
+import CustomCard from '../components/CustomCard';
+import { CustomFooter } from '../components/CustomFooter';
+import ProgressInfo from '../container/ProgressInfo';
 
 function Home() {
-    return (
+  return (
     <>
-    <AppHeader/>
-    <Slider/>
-    <CustomCard/>
-    <CustomFooter/>
+      <AppHeader />
+      <Slider />
+      <CustomCard />
+      <ProgressInfo />
+      <CustomFooter />
     </>
-    );
+  );
 }
 
 export default Home;

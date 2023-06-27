@@ -1,11 +1,14 @@
 import { Carousel } from 'antd';
-import './Slider.css'
+import './Slider.css';
 const contentStyle = {
   height: '400px',
   color: '#fff',
   lineHeight: '160px',
   textAlign: 'center',
-  background: '#364d79'
+  backgroundImage:
+    'url("https://images.pexels.com/photos/9122851/pexels-photo-9122851.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load")',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
 };
 const Slider = () => (
   <Carousel autoplay>

@@ -1,15 +1,13 @@
-import { Layout } from 'antd';
+import { Layout, Row } from 'antd';
 
 const { Footer } = Layout;
 
 export const CustomFooter = () => {
   return (
-    <Layout style={{marginTop:'100px'}} >
+    <Layout style={{ marginTop: '500px' }}>
       {/* Your content here */}
-      
-      <Footer style={{ textAlign: 'center'}}>
-        This is the footer.
-      </Footer>
+
+      <Footer style={{ textAlign: 'center' }}>This is the footer.</Footer>
     </Layout>
   );
 };
