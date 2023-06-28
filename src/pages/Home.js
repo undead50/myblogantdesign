@@ -2,7 +2,7 @@ import AppHeader from '../components/AppHeader';
 import Slider from '../components/Slider';
 import CustomCard from '../components/CustomCard';
 import { CustomFooter } from '../components/CustomFooter';
-import ProgressInfo from '../container/ProgressInfo';
+import CustomList from '../components/CustomList';
 
 function Home() {
   return (
@@ -10,7 +10,7 @@ function Home() {
       <AppHeader />
       <Slider />
       <CustomCard />
-      <ProgressInfo />
+      <CustomList/>
       <CustomFooter />
     </>
   );
