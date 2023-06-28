@@ -8,12 +8,18 @@
     width: 272px;
 }
 
+@media( max-width: 1600px){
+  .list_img{
+    width: 200px;
+  }
+}
+
 @media (max-width: 768px) {
    /* .list_row{
     display: none;
    } */
    .list_img{
-    width: 200px;
+    width: 900px;
    }
    .custom_list{
     width:  450px !important;
