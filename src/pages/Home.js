@@ -1,8 +1,8 @@
 import AppHeader from '../components/AppHeader';
-import Slider from '../components/Slider';
+import Slider from '../components/Slider/Slider';
 import CustomCard from '../components/CustomCard';
 import { CustomFooter } from '../components/CustomFooter';
-import CustomList from '../components/CustomList';
+import CustomList from '../components/List/CustomList';
 
 function Home() {
   return (
@@ -10,7 +10,7 @@ function Home() {
       <AppHeader />
       <Slider />
       <CustomCard />
-      <CustomList/>
+      <CustomList />
       <CustomFooter />
     </>
   );
