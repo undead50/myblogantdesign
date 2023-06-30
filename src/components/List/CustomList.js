@@ -6,28 +6,19 @@ import './customlist.css';
 import VideoPlayer from '../VideoPlayer/VideoPlayer';
 import { useEffect, useState } from 'react';
 import { useApi } from '../../hooks/CustomHooks';
+import { useDispatch } from 'react-redux';
+import { setvideoId } from '../../store/slices/videoSlice';
 
 const apiUrl = process.env.REACT_APP_API_URL;
 const apiKey = process.env.REACT_APP_API_KEY;
 
-// const dataa = Array.from({
-//   length: 23,
-// }).map((_, i) => ({
-//   href: 'https://ant.design',
-//   title: `ant design part ${i}`,
-//   avatar: `https://xsgames.co/randomusers/avatar.php?g=pixel&key=${i}`,
-//   description:
-//     'Ant Design, a design language for background applications, is refined by Ant UED Team.',
-// }));
-// const IconText = ({ icon, text }) => (
-//   <Space>
-//     {React.createElement(icon)}
-//     {text}
-//   </Space>
-// );
-
 const CustomList = () => {
   const [listData, setlistData] = useState([]);
+  const dispatch = useDispatch();
+
+  const handlevideIdChange =(videoId)=>{
+    dispatch(setvideoId(videoId))
+  }
 
   const params = {
     part: 'snippet',
@@ -38,6 +29,7 @@ const CustomList = () => {
 
   useEffect(() => {
     if (data !== null) {
+      dispatch(setvideoId(data.items[0].id.videoId))
       setlistData(data.items);
     }
   }, [data]);
@@ -52,6 +44,7 @@ const CustomList = () => {
     avatar: list.snippet.thumbnails.default.url,
     description: list.snippet.description,
     image: list.snippet.thumbnails.high.url,
+    videoId: list.id.videoId
   }));
   const IconText = ({ icon, text }) => (
     <Space>
@@ -110,7 +103,8 @@ const CustomList = () => {
                   key="list-vertical-message"
                 />,
               ]}
-              extra={<img alt="logo" src={item.image} className="list_img" />}
+              extra={<img alt="logo" src={item.image} onClick={()=>handlevideIdChange(item.videoId)
+              } className="list_img" />}
               className="custom_list"
             >
               <List.Item.Meta

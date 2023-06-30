@@ -1,8 +1,8 @@
-import Home from "./pages/Home";
+import MyRoutes from "./routes";
 
 function App() {
   return (
-    <Home/>
+    <MyRoutes/>
   );
 }
 
